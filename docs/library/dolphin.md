@@ -32,9 +32,11 @@ current source code. We provide two methods: one using *Git* and one without.
     * **If you have *Git* (if not, see the next option)**
     Just clone the most recent version of the code by running:
     ```
-    git clone --depth=1 https://github.com/libretro/dolphin.git
+    git clone --depth=1 --filter=blob:none --sparse https://github.com/libretro/dolphin.git
+    cd dolphin
+    git sparse-checkout set data/Sys    
     ```
-    * **If you don't have *Git* **
+    * **If you don't have *Git***
     You can download a *zip* file of the source code with the following URL:
     [https://github.com/libretro/dolphin/archive/master.zip](https://github.com/libretro/dolphin/archive/master.zip)
     You can then extract it.
